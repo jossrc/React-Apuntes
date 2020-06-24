@@ -1,7 +1,12 @@
-test('Debe ser válido (true)', () => {
-  const isActive = false;
+describe('Pruebas en el archivo demo.test.js', () => {
+  test('Deben de ser iguales los Strings', () => {
+    // 1. Inicialización
+    const message = 'Hola mundo';
 
-  if (!isActive) {
-    throw new Error('No está activo');
-  }
+    // 2. Estímulo
+    const message2 = `Hola mundo`;
+
+    // 3. Observar el comportamiento
+    expect(message).toBe(message2); // ==
+  });
 });
