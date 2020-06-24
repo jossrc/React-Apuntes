@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const CounterApp = ({ value }) => {
   const [counter, setCounter] = useState(value);
 
-  const handleAdd = (e) => {
-    setCounter(counter + 1)
-  };
+  const handleAdd = (e) => setCounter(counter + 1);
+  const handleSubstract = (e) => setCounter(counter - 1);
+  const handleReset = (e) => setCounter(value);
 
   return (
     <>
@@ -16,9 +16,9 @@ const CounterApp = ({ value }) => {
         <i>{counter}</i>
       </h2>
 
-      <button onClick={handleAdd}>
-        Click <b>+1</b>
-      </button>
+      <button onClick={handleAdd}>Click +1</button>
+      <button onClick={handleReset}>Reset</button>
+      <button onClick={handleSubstract}>Click -1</button>
     </>
   );
 };
