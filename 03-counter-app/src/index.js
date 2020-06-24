@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const greeting = <h1>Hello World</h1>
+import FirstApp from './FirstApp';
+
+import './index.css';
+
 const divRoot = document.getElementById('root');
 
-ReactDOM.render(greeting, divRoot)
+ReactDOM.render(<FirstApp/>, divRoot)
