@@ -1,14 +1,14 @@
 // Funciones en JS
 
-const greet = (name) => `Hola, ${name}`;
+//const greet = (name) => `Hola, ${name}`;
 
-const getUser = () => ({
+export const getUser = () => ({
   uid: 'ABC123',
   username: 'raijinjr',
 });
 
-console.log(greet('Goku'));
-console.log(getUser());
+// console.log(greet('Goku'));
+// console.log(getUser());
 
 // Tarea
 // 1. Transformar a una funcion de Flecha
@@ -27,10 +27,10 @@ const activeUser = getActiveUser('Joss');
 console.log(activeUser);
  */
 
-const getActiveUser = (userName) => ({
+export const getActiveUser = (userName) => ({
   uid: 'ABC567',
   userName,
 });
 
-const activeUser = getActiveUser('Joss');
-console.log(activeUser);
+// const activeUser = getActiveUser('Joss');
+// console.log(activeUser);
