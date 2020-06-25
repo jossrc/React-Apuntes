@@ -11,4 +11,15 @@ describe('Pruebas en el componente FirstApp', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  test('FirstApp : Debe de mostar el subTitle enviado por props', () => {
+    const greetingTest = 'Bienvenido a React';
+    const subTitleTest = 'Aprendiendo Testing';
+    const wrapper = shallow(
+      <FirstApp greeting={greetingTest} subTitle={subTitleTest} />
+    );
+
+    const textSubTitle = wrapper.find('h4 i').text(); // document.querySelector()
+    expect(textSubTitle).toBe(subTitleTest);
+  });
 });

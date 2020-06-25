@@ -15,7 +15,6 @@ exports[`Pruebas en el componente FirstApp FirstApp : Debe de mostar <FirstApp/>
   </h4>
   <p>
     Bienvenido a React
-    !!
   </p>
 </Fragment>
 `;

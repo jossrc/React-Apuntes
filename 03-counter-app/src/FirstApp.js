@@ -7,7 +7,7 @@ const FirstApp = ({ greeting, subTitle }) => {
       <h1>CounterApp</h1>
       <hr/>
       <h4> <i>{subTitle}</i> </h4>
-      <p>{greeting}!!</p>
+      <p>{greeting}</p>
     </Fragment>
   );
 };
