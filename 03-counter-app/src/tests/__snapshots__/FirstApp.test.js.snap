@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente FirstApp FirstApp : Debe de mostar <FirstApp/> correctamente 1`] = `
+<Fragment>
+  <h1>
+    CounterApp
+  </h1>
+  <hr />
+  <h4>
+     
+    <i>
+      Cuenta con nosotros
+    </i>
+     
+  </h4>
+  <p>
+    Bienvenido a React
+    !!
+  </p>
+</Fragment>
+`;
