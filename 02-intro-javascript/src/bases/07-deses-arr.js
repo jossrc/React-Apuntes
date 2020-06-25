@@ -1,15 +1,15 @@
 const characters = ['Goku', 'Vegeta', 'Trunks'];
 
 const [p1, , trunks] = characters;
-console.log(p1, trunks);
+// console.log(p1, trunks);
 
-const returnArray = () => {
+export const returnArray = () => {
   return ['ABC', 123];
 };
 
-const [letters] = returnArray();
+// const [letters] = returnArray();
 
-console.log(letters);
+// console.log(letters);
 
 // Tarea
 // 1. El primer valor del arr se llamará name
@@ -38,6 +38,8 @@ const useState = (value) => {
   ];
 };
 
+/* 
 const [name, setName] = useState('Goku');
 console.log(name);
 setName();
+ */
