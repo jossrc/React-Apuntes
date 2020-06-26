@@ -9,4 +9,4 @@ import './index.css';
 const divRoot = document.getElementById('root');
 
 // ReactDOM.render(<FirstApp greeting='Bienvenido a React'/>, divRoot)
-ReactDOM.render(<CounterApp value={10}/>, divRoot)
+ReactDOM.render(<CounterApp value={5}/>, divRoot)
