@@ -5,12 +5,12 @@ import { shallow } from 'enzyme';
 import CounterApp from '../CounterApp';
 
 describe('Pruebas en el componente CounterApp', () => {
-    // let wrapper; // undefined
+  // let wrapper; // undefined
   let wrapper = shallow(<CounterApp />);
 
   beforeEach(() => {
-      wrapper = shallow(<CounterApp/>);
-  })
+    wrapper = shallow(<CounterApp />);
+  });
 
   test('CounterApp : Debe de mostar <CounterApp/> correctamente', () => {
     expect(wrapper).toMatchSnapshot();
@@ -26,22 +26,30 @@ describe('Pruebas en el componente CounterApp', () => {
   });
 
   test('handleAdd() : Debe de incrementar con el botón Click +1', () => {
-     // const btnAdd =  wrapper.find('button').at(0);
-     // console.log(btnAdd.html());
-     wrapper.find('button').at(0).simulate('click');
-     const counterText = wrapper.find('h2 i').text().trim();
+    // const btnAdd =  wrapper.find('button').at(0);
+    // console.log(btnAdd.html());
+    wrapper.find('button').at(0).simulate('click');
+    const counterText = wrapper.find('h2 i').text().trim();
 
-     expect(counterText).toBe('11')
-
+    expect(counterText).toBe('11');
   });
 
   test('handleSubstract() : Debe disminuir con el botón Click -1', () => {
+    wrapper.find('button').at(2).simulate('click');
+    const counterText = wrapper.find('h2 i').text().trim();
 
-      wrapper.find('button').at(2).simulate('click');
-      const counterText = wrapper.find('h2 i').text().trim();
+    expect(counterText).toBe('9');
+  });
 
-      expect(counterText).toBe('9');
+  test('handleReset() : Debe restaurar el value a su valor por defecto', () => {
+    const valueTest = 105;
+    const wrapper = shallow(<CounterApp value={valueTest} />);
+    wrapper.find('button').at(0).simulate('click');
+    wrapper.find('button').at(0).simulate('click');
+    wrapper.find('button').at(1).simulate('click');
 
-  })
+    const counterText = wrapper.find('h2 i').text().trim();
 
+    expect(counterText).toBe(valueTest.toString());
+  });
 });
