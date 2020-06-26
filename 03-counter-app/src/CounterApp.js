@@ -10,7 +10,7 @@ const CounterApp = ({ value }) => {
 
   return (
     <>
-      <h1>CounterApp</h1>
+      <h1>CounterApp!!</h1>
       <hr />
       <h2>
         <i>{counter}</i>
