@@ -5,3 +5,16 @@
 body {
   padding: 20px;
 }
+
+input {
+  color: gray;
+  width: 100%;
+  font-size: 1.2rem;
+  border: .9px solid rgb(17, 17, 17);
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 2px solid rgb(0, 162, 255);
+  outline: 0 none;
+}
