@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import GifGridItem from './GifGridItem';
 
 const GifGrid = ({ category }) => {
-  /* 
-        Cada vez que se realiza un cambio (useState) React actualiza
-        todo el componente, y si trabajamos con peticiones, las vuelve a traer.
-        Y si estuvieramos trabajando con un setFunction entrariamos en un ciclo
-        infinito.
-        Por eso se recomienda trabajar con useEffect
-    */
-
-  const [count, setCount] = useState(0);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     getGifs();
@@ -30,13 +23,16 @@ const GifGrid = ({ category }) => {
     });
 
     console.log(gifs);
+    setImages(gifs);
   };
 
   return (
     <div>
       <h3>{category}</h3>
-      <button onClick={() => setCount(count + 1)}>+1</button>
-      <p>{count}</p>
+      {images.map((img) => (
+          /* Realizando desestructuración */
+        <GifGridItem key={img.id} {...img} />
+      ))}
     </div>
   );
 };
