@@ -19,9 +19,8 @@ const GifExpertApp = () => {
   return (
     <>
       <h2>GifExpertApp</h2>
-      <AddCategory/>
+      <AddCategory setCategories={setCategories} />
       <hr /> <br />
-
       <ol>
         {categories.map((anime) => (
           <li key={anime}>{anime}</li>
