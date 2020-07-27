@@ -27,13 +27,15 @@ const GifGrid = ({ category }) => {
   };
 
   return (
-    <div>
+    <>
       <h3>{category}</h3>
-      {images.map((img) => (
+      <div className='card-grid'>
+        {images.map((img) => (
           /* Realizando desestructuración */
-        <GifGridItem key={img.id} {...img} />
-      ))}
-    </div>
+          <GifGridItem key={img.id} {...img} />
+        ))}
+      </div>
+    </>
   );
 };
 
